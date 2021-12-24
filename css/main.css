@@ -361,7 +361,7 @@ textarea {
   object-position: center;
   width: 125px;
   height: 200px;
-  /* opacity: .4; */
+  opacity: .2; 
   transition: opacity.3s ease-in-out;
 }
 .stories__video-container:hover .stories__bg {
@@ -377,7 +377,7 @@ textarea {
   text-align: center;
   line-height: 1.4;
 }
-.stories__new-button {
+.stories__new-btn {
   background: var(--fb-blue);
   width: 40px;
   height: 40px;
@@ -389,10 +389,22 @@ textarea {
   border: 4px solid var(--fb-white);
   position: absolute;
   top: -20px;
-  left: 40px;
+  left: 35px;
+}
+.stories__video-container--plain .stories__title {
+  background: transparent;
+  color: var(--fb-white);
 }
 
-
+.stories__user {
+  border: 4px solid var(--fb-blue);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: -135px;
+  left: 20px;
+}
 
 /* ==========================================================================
    Helper classes
