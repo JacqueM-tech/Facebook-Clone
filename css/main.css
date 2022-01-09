@@ -501,7 +501,7 @@ textarea {
   font-size: .7rem;
   color: var(--light-color-text);
 }
-.photopost__info .fa-illipsis-h {
+.photopost__info .fa-ellipsis-h {
   color: var(--light-color-text); 
 }
 .photopost__description {
