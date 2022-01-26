@@ -245,6 +245,7 @@ textarea {
 .content-area--feed {
   padding: 90px 15px 20px;
   display: flex;
+  height: 2500px;
 }
 .sidenav {
   width: 25%;
@@ -510,6 +511,33 @@ textarea {
 }
 .photopost__image img {
   width: 100%;
+}
+.photopost__stats {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--light-color-text);
+  font-weight: 300;
+  font-size: .9rem;
+}
+.photopost__stats-emojis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.emoji-circle {
+  display: flex;
+  width: 22px;
+  height: 22px;
+  background: black;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: .4rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  position: relative;
 }
 
 /* ==========================================================================
