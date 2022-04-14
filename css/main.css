@@ -539,6 +539,30 @@ textarea {
   border: 2px solid white;
   position: relative;
 }
+.emoji-circle:nth-child(1){
+  z-index: 3;
+}
+.emoji-circle:nth-child(2){
+  left: -5px;
+  z-index: 2;
+}
+.emoji-circle:nth-child(3){
+  left: -10px;
+  z-index: 1;
+}
+.emoji-circle--blue {
+  background: var(--fb-blue);
+}
+.emoji-circle--red {
+  background: var(--fb-red);
+}
+.emoji-circle--yellow {
+  background: var(--fb-yellow);
+}
+.emoji-circle--blue .fa-thumbs-up {
+  position: relative;
+  top: -1px;
+}
 
 /* ==========================================================================
    Helper classes
