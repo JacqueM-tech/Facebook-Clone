@@ -105,7 +105,9 @@ textarea {
       --light-color-text: #606770;
       --button-link: #e0e2e8;
       --stories-bg: #090909;
-      --icon-circle-bg: rgb(75, 74, 74); 
+      --icon-circle-bg: linear-gradient(0deg, rgba(65,67,69,1)0%, rgba(107,110,114,1) 100%);
+      /* --icon-circle-bg: rgb(75, 74, 74);  */
+      --shadow-color: rgba(0,0,0,.25);
   }
   body {
       background: var(--fb-bgcolor);
@@ -120,7 +122,7 @@ textarea {
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+      box-shadow: 0px 0px 5px 0px var(--shadow-color);
       position: fixed;
       z-index: 20;
       top: 0;
@@ -245,7 +247,6 @@ textarea {
 .content-area--feed {
   padding: 90px 15px 20px;
   display: flex;
-  height: 2500px;
 }
 .sidenav {
   width: 25%;
@@ -413,7 +414,7 @@ textarea {
   width: 100%;
   flex: none;
   border-radius: 5px;
-  box-shadow: 0px 1px 2px 0px rgba(0,0,0,.25);
+  box-shadow: 0px 1px 2px 0px var(--shadow-color);
   margin-bottom: 20px;
 }
 .newpost {
@@ -518,6 +519,7 @@ textarea {
   justify-content: space-between;
   align-items: center;
   color: var(--light-color-text);
+  padding: 0 20px;
   font-weight: 300;
   font-size: .9rem;
 }
@@ -557,11 +559,77 @@ textarea {
   background: var(--fb-red);
 }
 .emoji-circle--yellow {
-  background: var(--fb-yellow);
+  background: black;
+  overflow: hidden;
 }
 .emoji-circle--blue .fa-thumbs-up {
   position: relative;
   top: -1px;
+}
+.emoji-circle--yellow .fa-surprise {
+  color: var(--fb-yellow);
+  font-size: 1.3rem;
+  position: relative;
+  top: -1px;
+}
+.photopost__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.photopost__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-color-text);
+  width: 100%;
+  text-decoration: none;
+}
+.photopost__link .fas {
+  margin-right: 10px;
+}
+.floatingmsg {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+}
+.floatingmsg__bubble {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 5px 10px 0px var(--shadow-color);
+  background: var(--button-link);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.floatingmsg__bubble img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.floatingmsg__bubble:hover .fa-edit{
+  color: var(--fb-blue);
+}
+.floatingmsg__notification {
+  background-color: var(--fb-red);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: .8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-weight: 700;
+  z-index: 3;
 }
 
 /* ==========================================================================
